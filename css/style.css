@@ -1,0 +1,549 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+}
+ul,
+ol {
+  list-style: none;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+p {
+  line-height: 1.6rem;
+}
+button {
+  padding: 0.5rem;
+  border: none;
+  width: 5rem;
+}
+
+/* HEADER........................ */
+#header {
+  background-image: url("http://tny.im/sn0");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #d1d3dd;
+  background-repeat: no-repeat;
+}
+#header #nav-bar {
+  background-color: #363842f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+#header #nav-bar .logo img {
+  width: 50px;
+  margin: 5px;
+}
+
+#nav-bar ul {
+  display: flex;
+  gap: 1rem;
+}
+
+/* nav ul li {
+  width: 65px;
+  position: relative;
+} */
+nav ul a {
+  text-decoration: none;
+  color: #b5b7c0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 2rem; */
+  padding: 0.5rem;
+  transition: all 1s ease-in-out;
+  background-color: #58595a5b;
+  border-radius: 2px;
+  position: relative;
+}
+nav ul a:hover {
+  background-color: #00000000;
+  color: #fbfbfd;
+}
+nav ul a:hover::after {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #616266f1;
+  position: absolute;
+  top: 2rem;
+  animation: underline 1s 0.1s alternate forwards;
+}
+
+@keyframes underline {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+#header .header-container {
+  width: 100%;
+  background-color: #363842e5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container .header-main-content {
+  width: 50%;
+  padding: 1rem;
+}
+
+.header-container .header-main-content h1 {
+  margin-bottom: 1rem;
+}
+
+#header .header-container .header-main-content .form-container {
+  margin: 1.5rem 0;
+}
+#header .header-container .header-main-content .form-container h3 {
+  margin: 0.5rem 0;
+}
+
+#header .header-container .header-main-content .form-container input {
+  width: 20rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 0.7rem;
+}
+.form-container input:focus {
+  outline: 1px solid #383737b7;
+}
+.form-container #submit {
+  background-color: #eb930ff8;
+  color: #fbfbfd;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+.form-container #submit:hover {
+  background-color: #8a6a13;
+  color: #e2e2ecef;
+}
+
+#header .iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%; /*  16:9  */
+  position: relative;
+}
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  /* z-index: -1; */
+}
+
+/* <<<<<<<.........main..........>>>>>>> */
+
+main {
+  text-align: center;
+}
+
+main .features {
+  margin-bottom: 2rem;
+}
+.features h2 {
+  margin: 2rem 0;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+.features-container figure {
+  width: 10rem;
+  border-radius: 10px;
+  background-color: #424346e1;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.features-container figure:hover {
+  background-color: #33373f;
+  cursor: pointer;
+}
+.feature-box {
+  padding: 1rem;
+}
+
+main .testimonial {
+  background-image: url("http://tny.im/snh");
+}
+.quote-container {
+  background-color: #3f4049e5;
+  color: #b6b9c4f1;
+}
+main .testimonial .quote {
+  text-align: left;
+  font-style: italic;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+main .testimonial .quote-person {
+  text-align: right;
+  font-weight: 700;
+}
+
+.enroll .enroll-form-container {
+  text-align: left;
+  background-color: #363842e5;
+  color: #bec6dde1;
+}
+.enroll .enroll-form-container .form-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.enroll .enroll-form-container input {
+  padding: 0.6rem;
+  width: 80%;
+  border-radius: 3px;
+  border: none;
+}
+.enroll .enroll-form-container input:focus {
+  outline: 1px solid #4a4c55;
+}
+
+.enroll button {
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+  background-color: #4a4c55;
+  border-radius: 5px;
+  border: 1px solid #8d8989;
+  color: #bec6dde1;
+}
+.enroll button:hover {
+  background-color: #626266;
+}
+
+/* <<<<<<<------------FOOTER---------->>>>>>>>>>>>> */
+
+footer a {
+  color: #b5b7c0;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #738d6e;
+}
+footer {
+  background-image: url(https://images.unsplash.com/photo-1627907228175-2bf846a303b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #d5ddb0;
+  overflow: hidden;
+}
+
+footer > .footer-container {
+  background-color: #363842e5;
+}
+footer .contact,
+footer .connect {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+footer .contact h3,
+footer .connect h3 {
+  font-size: 18px;
+  margin: 1rem 0;
+  font-size: 20px;
+}
+
+footer h3::after {
+  content: "";
+  display: block;
+  background-color: #616266f1;
+  height: 5px;
+  width: 40px;
+}
+.contact .contact-container,
+.connect .social-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-links a i:hover,
+.social-links a i:active {
+  color: #daddcfb9;
+}
+
+.contact .contact-container > .content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-details {
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+.contact-details > address {
+  font-style: normal;
+  color: #b5b7c0;
+  font-size: 0.8rem;
+}
+footer .icon i {
+  font-size: 1.8rem;
+  color: #d5ddb0;
+}
+
+/* ..........MEDIA QUERIES........... */
+
+/* MOBILE DEVICES........... */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  #header #nav-bar {
+    padding: 0 1rem;
+  }
+  #header .header-container {
+    gap: 1rem;
+    padding: 5rem 1rem;
+  }
+  #header .header-container .header-main-content {
+    width: 100%;
+    padding: 0px;
+  }
+  main .features {
+    padding: 2rem 1rem;
+  }
+  .features-container {
+    flex-direction: column;
+  }
+  .features-container figure {
+    width: 100%;
+    border-radius: 0;
+    padding: 1rem 0;
+  }
+  .feature-box i {
+    font-size: 6rem;
+    color: #dfd8e0;
+  }
+  .features-container figure figcaption {
+    color: #dfd8e0;
+    font-size: 20px;
+    padding-bottom: 1rem;
+  }
+  main .testimonial .quote-container {
+    padding: 5rem 2rem;
+  }
+  .enroll .enroll-form-container {
+    padding: 5rem 2rem;
+    background-color: #b8bcc4;
+    color: #33373f;
+  }
+  .enroll .enroll-form-container input {
+    width: 100%;
+  }
+  footer > .footer-container {
+    padding: 1.6rem;
+  }
+  footer .footer-container .contact-container {
+    flex-direction: column;
+  }
+}
+/* .......................... */
+
+/* IPAD//////TABLETS................... */
+@media (min-width: 481px) and (max-width: 768px) {
+  #header #nav-bar {
+    padding: 0 5%;
+  }
+  #header .header-container {
+    padding: 5rem 5%;
+    gap: 1rem;
+  }
+  #header .header-container .header-main-content {
+    width: 100%;
+    padding: 0px;
+  }
+  main .features {
+    padding: 2rem 5%;
+  }
+  .features-container {
+    flex-direction: column;
+  }
+  .features-container figure {
+    width: 70%;
+    border-radius: 0;
+    padding: 1rem 0;
+  }
+  .feature-box i {
+    font-size: 6rem;
+    color: #dfd8e0;
+  }
+
+  .features-container figure figcaption {
+    color: #dfd8e0;
+    font-size: 20px;
+    padding-bottom: 1rem;
+  }
+
+  main .testimonial .quote-container {
+    padding: 5rem 5rem;
+  }
+
+  .enroll .enroll-form-container {
+    padding: 5rem 15%;
+    background-color: #b8bcc4;
+    color: #33373f;
+  }
+  .enroll .enroll-form-container input {
+    width: 100%;
+  }
+  footer > .footer-container {
+    padding: 1.6rem 2rem;
+  }
+}
+/* ..................................... */
+
+/* SMALLSCREEN///////LAPTOPS................... */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #header #nav-bar {
+    padding: 0 5%;
+  }
+  #header .header-container {
+    padding: 5rem 5%;
+    gap: 1rem;
+  }
+  #header .header-container .header-main-content {
+    width: 80%;
+    padding: 0px;
+  }
+  main .features {
+    padding: 2rem 5%;
+  }
+  .features-container {
+    gap: 1rem;
+    padding: 0;
+  }
+  .feature-box i {
+    font-size: 4rem;
+    color: #dfd8e0;
+  }
+
+  .features-container figure figcaption {
+    color: #dfd8e0;
+    font-size: 20px;
+    padding-bottom: 0.5rem;
+  }
+  main .testimonial .quote-container {
+    padding: 5rem 10rem;
+  }
+  .enroll .enroll-form-container {
+    padding: 5rem 10rem;
+    background-color: #b8bcc4;
+    color: #33373f;
+  }
+  .enroll .enroll-form-container input {
+    width: 78%;
+  }
+  footer > .footer-container {
+    padding: 1.6rem 5rem;
+  }
+}
+/* .......................... */
+
+/*  DESKTOP ////// LARGESCREEN...............*/
+
+@media (min-width: 1025px) {
+  #header #nav-bar {
+    padding: 0 5%;
+  }
+  #header .header-container {
+    padding: 5rem 5%;
+  }
+  main .features {
+    padding: 2rem 5%;
+  }
+  main .testimonial .quote-container {
+    padding: 5rem 15rem;
+  }
+  .feature-box i {
+    font-size: 5rem;
+    color: #dfd8e0;
+  }
+
+  .features-container figure figcaption {
+    color: #dfd8e0;
+    font-size: 20px;
+    padding-bottom: 1rem;
+  }
+  main .enroll {
+    padding: 5rem 10%;
+  }
+  .enroll .enroll-form-container {
+    padding: 3rem 10rem;
+  }
+  footer > .footer-container {
+    padding: 1.6rem 10rem;
+  }
+}
+/* .................. */
+
+/* EXTRALARGESCREEN....................... */
+@media (min-width: 1201px) {
+  #header #nav-bar {
+    padding: 0 10%;
+  }
+  #header .header-container {
+    padding: 5rem 10%;
+  }
+  main .features {
+    padding: 2rem 10%;
+  }
+  main .enroll {
+    padding: 5rem 10%;
+  }
+  footer > .footer-container {
+    padding: 1.6rem 10rem;
+  }
+}
+/* ................. */
